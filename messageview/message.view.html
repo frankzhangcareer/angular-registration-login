@@ -1,0 +1,9 @@
+<h1>Hi {{vm.user.firstName}}!</h1>
+<p>You're logged in!!<a href="#!/login" class="btn btn-primary">Logout</a></p>
+<h3>All your messages:</h3>
+<ul>
+    <li ng-repeat="message in  vm.user.allMessages">
+        {{message.title}} - <a ng-click="vm.viewMessage(message.id)">View</a>
+    </li>
+</ul>
+<p>&nbsp;</p>
