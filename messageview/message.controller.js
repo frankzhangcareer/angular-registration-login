@@ -37,7 +37,7 @@
                 .then(function (user) {
                     vm.user = user; // set the current user for VM local variable. 
                     //TODO: Try not return, but just set up the local scope
-                    //return vm.user;
+                    return vm.user;
                 }))
             return deferred.promise;
         }

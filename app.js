@@ -34,6 +34,10 @@
                 controllerAs: 'vm'
             })
 
+            .when('/phones/:phoneId', {
+              template: '<phone-detail></phone-detail>'
+            }).
+
             .otherwise({ redirectTo: '/login' });
     }
 

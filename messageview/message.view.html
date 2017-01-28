@@ -1,9 +1,20 @@
 <h1>Hi {{vm.user.firstName}}!</h1>
 <p>You're logged in!!<a href="#!/login" class="btn btn-primary">Logout</a></p>
 <h3>All your messages:</h3>
-<ul>
-    <li ng-repeat="message in  vm.user.allMessages">
-        {{message.title}} - <a ng-click="vm.viewMessage(message.id)">View</a>
-    </li>
+<ul class="list-group">
+   <li class="list-group-item" ng-repeat="message in  vm.user.allMessages">
+      <div>
+      <span>{{message.title}} </span>
+      <span class = "pull-right">
+	      <a ng-click="vm.viewMessage(message.id)"><span class="glyphicon glyphicon-eye-open">View</span></a>
+	      <a ng-click="vm.viewMessage(message.id)"><span class="glyphicon glyphicon-trash">Delete</span>
+	      </a>
+	      <a ng-click="vm.viewMessage(message.id)"><span class="glyphicon glyphicon-star">Marked</span>
+	      </a><span class="glyphicon glyphicon-star-empty">Mark</span>
+	      <a ng-click="vm.viewMessage(message.id)"><span class="glyphicon glyphicon-share-alt">Reply</span>
+	      </a>
+	      </span>
+	  </div>
+   </li>
 </ul>
 <p>&nbsp;</p>

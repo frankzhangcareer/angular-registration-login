@@ -1,7 +1,12 @@
 ﻿<h1>Hi {{vm.user.firstName}}!</h1>
 <p>You're logged in!!</p>
-<p><a href="#!/login" class="btn btn-primary">Logout</a></p>
-<h3>All your messages:</h3>
+
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="#/viewMessage">Message<span class="badge">2</span</a></li>
+  <li role="presentation"><a href="#/Profile">Profile</a></li>
+  <li role="presentation"><a href="#/login"  >Logout</a></li>
+</ul>
+<!-- <h3>All your messages:</h3>
 <ul>
     <li ng-repeat="user in vm.allUsers">
         {{user.username}} ({{user.firstName}} {{user.lastName}})
@@ -9,3 +14,4 @@
     </li>
 </ul>
 <p>&nbsp;</p>
+ -->
