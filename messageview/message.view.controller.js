@@ -5,8 +5,11 @@
         .module('app')
         .controller('MessageController', MessageController);
 
-    MessageController.$inject = ['MessageService','UserService', '$rootScope','$q'];
-    function MessageController(MessageService,UserService, $rootScope, $q) {
+    MessageController.$inject = ['MessageService','UserService', '$rootScope','$q','$scope','$state'];
+    function MessageController(MessageService,UserService, $rootScope, $q,$scope,$state) {
+        // you can access the data variable using below code
+        //$state.current.data
+
         var vm = this;
 
         vm.user = null;//$root.currentUser;
